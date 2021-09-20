@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="dimen_into_container">6dp</dimen>
+    <dimen name="image_user_size">200dp</dimen>
+    <dimen name="text_size_detail_screen">20sp</dimen>
 </resources>

@@ -1,7 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">RentaTeam</string>
-    <string name="title_home">Пользователи</string>
-    <string name="title_about_app">О приложении</string>
     <string name="unknown_error">Неизвестная ошибка</string>
     <string name="text_for_rentateam">Тестовое задание для Rentateam</string>
     <string name="error_loading_from_cache">Отсутствует интернет соединение. Загрузка из кеша!</string>

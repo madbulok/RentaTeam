@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".HostActivity">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/userImage"
+        android:layout_width="@dimen/image_user_size"
+        android:layout_height="@dimen/image_user_size"
+        android:layout_margin="@dimen/dimen_into_container"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/CornerRadius"/>
+
+    <TextView
+        android:id="@+id/tvEmailName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size_detail_screen"
+        android:layout_marginTop="@dimen/dimen_into_container"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userImage"
+        tools:text="@tools:sample/cities"/>
+
+    <TextView
+        android:id="@+id/tvFirstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size_detail_screen"
+        android:layout_marginTop="@dimen/dimen_into_container"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEmailName"
+        tools:text="@tools:sample/first_names"/>
+
+    <TextView
+        android:id="@+id/tvlastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size_detail_screen"
+        android:layout_margin="@dimen/dimen_into_container"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvFirstName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="@tools:sample/last_names"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

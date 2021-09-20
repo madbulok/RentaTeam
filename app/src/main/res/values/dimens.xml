@@ -3,4 +3,6 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="dimen_into_container">6dp</dimen>
+    <dimen name="image_user_size">200dp</dimen>
+    <dimen name="text_size_detail_screen">20sp</dimen>
 </resources>

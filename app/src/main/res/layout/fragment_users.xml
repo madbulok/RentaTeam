@@ -12,4 +12,11 @@
         tools:itemCount="20"
         tools:listitem="@layout/item_user_layout" />
 
+    <ProgressBar
+        android:id="@+id/pbLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
+
+
 </FrameLayout>

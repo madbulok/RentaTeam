@@ -1,6 +1,7 @@
 package com.uzlov.rentateam.repo.room
 
 import androidx.room.*
+import com.uzlov.rentateam.repo.models.Data
 
 import io.reactivex.rxjava3.core.Completable
 import io.reactivex.rxjava3.core.Single
@@ -8,24 +9,24 @@ import io.reactivex.rxjava3.core.Single
 @Dao
 interface UsersDao {
 
-//    @Query("SELECT * FROM UserModel")
-//    fun getTeams() : Single<List<TeamEntity>>
-//
-//    @Query("SELECT * FROM TeamEntity WHERE id=:id")
-//    fun getTeamByID(id: Int) : Single<TeamEntity>
-//
-//    @Insert
-//    fun insert(team: TeamEntity) : Completable
-//
-//    @Delete
-//    fun delete(team: TeamEntity) : Completable
-//
-////    @Query("UPDATE TeamEntity SET isActive=1 WHERE id=:teamId")
-////    fun setActiveTeam(teamId: Int): Completable
-//
-//    @Update(onConflict = OnConflictStrategy.REPLACE)
-//    fun setActiveTeam(teamId: TeamEntity): Completable
-//
-//    @Query("UPDATE TeamEntity SET isActive=0 WHERE id > 0")
-//    fun setInactiveAllTeam(): Completable
+    @Query("SELECT * FROM Data")
+    fun getUsers(): Single<List<Data>>
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    fun insert(team: Data): Completable
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    fun insert(team: List<Data>): Completable
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    fun insert(vararg team: Data): Completable
+
+    @Delete
+    fun delete(team: Data): Completable
+
+    @Delete
+    fun delete(team: List<Data>): Completable
+
+    @Delete
+    fun delete(vararg team: Data): Completable
 }
