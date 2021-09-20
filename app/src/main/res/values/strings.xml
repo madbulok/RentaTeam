@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">RentaTeam</string>
+    <string name="title_home">Пользователи</string>
+    <string name="title_about_app">О приложении</string>
+</resources>
