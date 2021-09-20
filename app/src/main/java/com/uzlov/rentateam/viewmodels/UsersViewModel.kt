@@ -39,7 +39,12 @@ class UsersViewModel(
         networkStatus.isOnline().flatMap { isOnline ->
             if (!isOnline) {
                 usersLiveData.postValue(AppSate.Error(Exception("Отсутствует интернет соединение. Загрузка из кеша!")))
-                Observable.empty()
+                userRepository.getUsers(isOnline)
+                    .observeOn(uiScheduler)
+                    .doOnSubscribe {
+                        compositeDisposable.add(it)
+                        usersLiveData.postValue(AppSate.Loading(isLoading = true))
+                    }.toObservable()
             } else {
                 // loading from local or remote service with message to user
                 userRepository.getUsers(isOnline)
